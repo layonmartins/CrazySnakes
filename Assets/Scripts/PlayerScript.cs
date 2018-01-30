@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,5 +31,11 @@ public class PlayerScript : MonoBehaviour {
 	//muda a direção do jogador
 	void ChangeDirection(){
 		direction = (direction == 1) ? -1 : 1;
+	}
+
+	//verifica a colisão
+	void OnCollisionEnter2D(Collision2D col){
+		if(col.gameObject.name == "WallMask")
+			ChangeDirection();
 	}
 }
