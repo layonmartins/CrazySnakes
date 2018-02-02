@@ -10,13 +10,16 @@ public class GameMainControllerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("Hi");
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("Olá");
+		
 		scoreText.text = "Pontos: " + score;
+	}
+
+	public void addScore() {
+		score++;
 	}
 }
